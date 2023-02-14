@@ -8,7 +8,7 @@
 
 rochelle = User.create(first_name:"Rochelle", last_name:"Katzman", email: "rochelleK@gmail.com",password:'1234')
 veronique = User.create(first_name:"Veronique", last_name:"Cadet", email: "vero-cadet@gmail.com",password:'1234')
-hassan = User.create!first_name:"Hassan", last_name:"Razak", email: "hassan-razak@gmail.com",password:'1234')
+hassan = User.create(first_name:"Hassan", last_name:"Razak", email: "hassan-razak@gmail.com",password:'1234')
 
 ortho = Career.create(
     name:"Orthodontist",
