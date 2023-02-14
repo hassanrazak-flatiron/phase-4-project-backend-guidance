@@ -11,7 +11,6 @@ class CreateCareers < ActiveRecord::Migration[7.0]
       t.integer :salary_2
       t.integer :salary_3
       t.integer :salary_4
-      t.integer :salary_5
 
       t.timestamps
     end

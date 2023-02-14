@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-rochelle = User.create!(first_name:"Rochelle", last_name:"Katzman", email: "rochelleK@gmail.com",password:'1234')
-veronique = User.create!(first_name:"Veronique", last_name:"Cadet", email: "vero-cadet@gmail.com",password:'1234')
-hassan = User.create!(first_name:"Hassan", last_name:"Razak", email: "hassan-razak@gmail.com",password:'1234')
+rochelle = User.create(first_name:"Rochelle", last_name:"Katzman", email: "rochelleK@gmail.com",password:'1234')
+veronique = User.create(first_name:"Veronique", last_name:"Cadet", email: "vero-cadet@gmail.com",password:'1234')
+hassan = User.create!first_name:"Hassan", last_name:"Razak", email: "hassan-razak@gmail.com",password:'1234')
 
 ortho = Career.create(
     name:"Orthodontist",
@@ -149,6 +149,16 @@ ortho = Career.create(
      salary_3:55000,
      salary_4: 61000
      )
+
+     Path.create(priority:1,user_id:rochelle.id,career_id:ortho.id)
+     Path.create(priority:2,user_id:rochelle.id,career_id:vet.id)
+     Path.create(priority:3,user_id:rochelle.id,career_id:curator.id)
+     Path.create(priority:1,user_id:vero.id,career_id:ent_law.id)
+     Path.create(priority:2,user_id:vero.id,career_id:programmer.id)
+     Path.create(priority:3,user_id:vero.id,career_id:programmer_bootcamp.id)
+     Path.create(priority:1,user_id:hassan.id,career_id:graphic_des.id)
+     Path.create(priority:2,user_id:hassan.id,career_id:ee.id)
+     Path.create(priority:3,user_id:hassan.id,career_id:trainer.id)
 
     
      
