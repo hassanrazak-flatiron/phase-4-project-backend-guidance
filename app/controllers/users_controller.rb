@@ -8,6 +8,11 @@ class UsersController < ApplicationController
 
     end
 
+    def index
+        render json: User.all, status: :ok 
+
+    end
+    
     def update
 
     end
