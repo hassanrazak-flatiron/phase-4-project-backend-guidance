@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     # rescue_from render not found, render unprocessible entity 
     # find out how to display error codes on user interface with ix. 
 
+
     def create
 
     end

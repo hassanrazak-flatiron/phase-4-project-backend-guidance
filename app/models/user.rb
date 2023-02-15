@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+
+has_many :paths
+has_many :careers, through: :paths
     # validations 
     # password 
         # minimum 3 characters non special  maximum : 7 
