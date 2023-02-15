@@ -1,15 +1,27 @@
 class User < ApplicationRecord
 
+##### Associations to other models##### 
 has_many :paths
 has_many :careers, through: :paths
-    # validations 
-    # password 
-        # minimum 3 characters non special  maximum : 7 
-        # presence true
-    # email 
-        # presence true 
-        # how to verify real email in validation. hassan do your research 
-        # must contain @ and .com
-    # first_name and alast_name presence true
+    
+##### validations ######## 
+# password 
+validates :password_digest, 
+presence: true,
+length: {in: 3..8}
+        
+### email ### 
+validates :email, email:true
+        
+### first_name and a last_name ###
+validates :first_name, presence: true 
+validates :last_name, presence: true 
+
+        
+        
+        
+        
+
+
 
 end

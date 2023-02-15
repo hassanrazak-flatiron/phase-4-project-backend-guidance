@@ -50,3 +50,6 @@ end
 gem "active_model_serializers", "~> 0.10.13"
 
 gem "rack-cors", :require => "rack/cors"
+
+# validates email in user model.
+gem 'email_validator'
