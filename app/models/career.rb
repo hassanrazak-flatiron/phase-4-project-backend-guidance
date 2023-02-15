@@ -1,2 +1,3 @@
 class Career < ApplicationRecord
+    
 end
