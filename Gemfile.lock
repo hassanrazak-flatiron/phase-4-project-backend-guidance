@@ -83,6 +83,8 @@ GEM
     debug (1.7.1)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
+    email_validator (2.2.4)
+      activemodel
     erubi (1.12.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
@@ -166,12 +168,14 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-darwin-21
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.13)
   bcrypt (~> 3.1.7)
   bootsnap
   debug
+  email_validator
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors
