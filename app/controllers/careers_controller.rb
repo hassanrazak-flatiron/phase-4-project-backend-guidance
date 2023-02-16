@@ -7,6 +7,11 @@ class CareersController < ApplicationController
 
     end
 
+    def show 
+        career = Career.find(params[:id])
+        render json: career
+    end 
+
     
 
 end
