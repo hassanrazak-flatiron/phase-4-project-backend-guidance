@@ -25,7 +25,7 @@ ortho = Career.create(
      salary_4: 330000
      )
      curator = Career.create(
-    name:"Cuseum Curator",
+    name:"Museum Curator",
      description:"Museum curators oversee collections of artwork and historic items and may conduct instructional, research, or public service activities of the institution.",
      min_edu_req:"Bachelor's and Master's Degrees",
      time_to_complete:8,
