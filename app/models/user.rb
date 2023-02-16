@@ -1,14 +1,17 @@
 class User < ApplicationRecord
 
+# encrypts user password during login and signup. 
+has_secure_password    
+
 ##### Associations to other models##### 
 has_many :paths
 has_many :careers, through: :paths
     
 ##### validations ######## 
 # password 
-validates :password_digest, 
+validates :password, 
 presence: true,
-length: {in: 3..8}
+length: {minimum: 3}
         
 ### email ### 
 validates :email, email:true

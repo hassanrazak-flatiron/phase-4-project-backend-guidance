@@ -3,9 +3,9 @@ class PathsController < ApplicationController
     # rescue_from render not found, render unprocessible entity 
 
    
-def index 
-render json: Path.all
-end 
+    def index 
+        render json: Path.all
+    end 
     
 
     def destroy
