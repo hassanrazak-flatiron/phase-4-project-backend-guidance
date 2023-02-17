@@ -14,7 +14,9 @@ class PathsController < ApplicationController
     
 
     def destroy
-
+    path = Path.find(params[:id])
+    path.destroy
+    head :no_content
     end
     private 
     def path_params
