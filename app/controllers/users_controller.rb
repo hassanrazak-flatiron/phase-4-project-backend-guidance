@@ -4,6 +4,7 @@ class UsersController < ApplicationController
     # find out how to display error codes on user interface with ix. 
     
     # skip_before_action :authorize, only: :create
+    before_action :authorize, only: [:show]
 
     def index
         render json: User.all
@@ -16,8 +17,11 @@ class UsersController < ApplicationController
     end
 
     def show
-        render json: User.find(session[:user_id])
+        render json: current_user
     end
+    # def me
+    #     render json: @current_user
+    # end
 
     private
 

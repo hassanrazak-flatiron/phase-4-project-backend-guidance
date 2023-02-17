@@ -1,4 +1,4 @@
-class CreatePaths < ActiveRecord::Migration[7.0]
+class CreatePaths < ActiveRecord::Migration[6.1]
   def change
     create_table :paths do |t|
       t.integer :priority
