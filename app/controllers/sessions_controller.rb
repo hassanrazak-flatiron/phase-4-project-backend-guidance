@@ -9,9 +9,10 @@ class SessionsController < ApplicationController
         # binding.break
         user = User.find_by(email: params[:email])
         if user.authenticate(params[:password])
-        session[:user_id]
+        # session[:init]= true
+        # byebug
+        session[:user_id] = user.id
         p session
-        byebug
         render json: user, serializer: UserSerializer
         else 
             render json: {errors:["Not Authorized"]}, status: :unauthorized
