@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-    skip_before_action :authorize, only: :create
+    # skip_before_action :authorize, only: :create
 
     # an existing user wants to logon to the website. 
     # the user is found using the incoming params. 
@@ -30,3 +30,5 @@ class SessionsController < ApplicationController
 
 
 end
+
+end 

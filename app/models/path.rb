@@ -13,7 +13,7 @@ class Path < ApplicationRecord
   #### career_id  ######
   # NEED TO REVISIT THIS, AND FIGURE OUT HOW TO 
   # ASSIGN ONLY ONE CAREER PATH PER USER_ID. NO DUPLICATE CAREER_IDs PER USER.
-  validates :career_id, uniqueness:true 
+  # validates :career_id, uniqueness:true 
 
 
   
