@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :paths
   resources :careers, except: [:update,:destroy,:create]
-  resources :users, only: [:create]
+  resources :users, only: [:create, :index]
   
   resources :sessions, only: [:create, :destroy]
 
