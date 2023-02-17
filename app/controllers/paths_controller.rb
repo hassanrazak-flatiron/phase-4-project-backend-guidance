@@ -4,7 +4,7 @@ class PathsController < ApplicationController
 
    
     def index 
-        render json: Path.all
+        render json: Path.all.order(:priority)
     end 
 
     def create 
