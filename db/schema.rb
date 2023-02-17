@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_14_160612) do
+ActiveRecord::Schema.define(version: 2023_02_14_160612) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,8 +26,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_14_160612) do
     t.integer "salary_2"
     t.integer "salary_3"
     t.integer "salary_4"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "paths", force: :cascade do |t|
@@ -36,8 +37,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_14_160612) do
     t.integer "loan_term"
     t.bigint "user_id", null: false
     t.bigint "career_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["career_id"], name: "index_paths_on_career_id"
     t.index ["user_id"], name: "index_paths_on_user_id"
   end
@@ -47,8 +48,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_14_160612) do
     t.string "last_name"
     t.string "email"
     t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "paths", "careers"
