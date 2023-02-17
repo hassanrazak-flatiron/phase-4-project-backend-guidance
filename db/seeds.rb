@@ -79,7 +79,7 @@ ortho = Career.create(
      )
 
      programmer_bootcamp = Career.create(
-    name:"Software Programmer",
+    name:"Software Programmer-B",
      description:"Programmers write code for computer programs and mobile applications. They also are involved in maintaining, debugging and troubleshooting systems and software to ensure that everything is running smoothly.",
      min_edu_req:"Bootcamp",
      time_to_complete:1,
