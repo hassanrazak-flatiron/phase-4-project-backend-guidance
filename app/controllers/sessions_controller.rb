@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
     # skip_before_action :authorize, only: :create
+    before_action :authorize, except: [:create]
 
     # an existing user wants to logon to the website. 
     # the user is found using the incoming params. 
@@ -8,8 +9,10 @@ class SessionsController < ApplicationController
         # binding.break
         user = User.find_by(email: params[:email])
         if user.authenticate(params[:password])
-        session[:user_id] = user.id
-        render json: user, seralizers:UserSerializer
+        session[:user_id]
+        p session
+        byebug
+        render json: user, serializer: UserSerializer
         else 
             render json: {errors:["Not Authorized"]}, status: :unauthorized
         end
@@ -18,11 +21,13 @@ class SessionsController < ApplicationController
 
     def destroy
         #  binding.break
-        if session[:user_id]
+        # if 
+            session[:user_id]
             session.delete :user_id
-        else
-            render json: {errors:["Not authorized"]}, status: :unauthorized
-    end
+            head :no_content 
+        # else
+        #     render json: {errors:["Not authorized"]}, status: :unauthorized
+    # end
 
     
    
