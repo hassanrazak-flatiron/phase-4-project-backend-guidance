@@ -79,7 +79,7 @@ ortho = Career.create(
      )
 
      programmer_bootcamp = Career.create(
-    name:"Software Programmer",
+    name:"Software Programmer-B",
      description:"Programmers write code for computer programs and mobile applications. They also are involved in maintaining, debugging and troubleshooting systems and software to ensure that everything is running smoothly.",
      min_edu_req:"Bootcamp",
      time_to_complete:1,
@@ -152,15 +152,15 @@ ortho = Career.create(
      salary_4: 61000
      )
 
-     Path.create(priority:1,user_id:rochelle.id,career_id:ortho.id)
-     Path.create(priority:2,user_id:rochelle.id,career_id:vet.id)
-     Path.create(priority:3,user_id:rochelle.id,career_id:curator.id)
-     Path.create(priority:1,user_id:vero.id,career_id:ent_law.id)
-     Path.create(priority:2,user_id:vero.id,career_id:programmer.id)
-     Path.create(priority:3,user_id:vero.id,career_id:programmer_bootcamp.id)
-     Path.create(priority:1,user_id:hassan.id,career_id:graphic_des.id)
-     Path.create(priority:2,user_id:hassan.id,career_id:ee.id)
-     Path.create(priority:3,user_id:hassan.id,career_id:trainer.id)
+     Path.create(priority:1,user_id:rochelle.id,career_id:ortho.id, loan_amt: 100000, interest_rate: 0.02, loan_term: 3 )
+     Path.create(priority:2,user_id:rochelle.id,career_id:vet.id,loan_amt: 50000, interest_rate: 0.05, loan_term: 4 )
+     Path.create(priority:3,user_id:rochelle.id,career_id:curator.id,  loan_amt: 10000, interest_rate: 0.02, loan_term: 2 )
+     Path.create(priority:1,user_id:vero.id,career_id:ent_law.id, loan_amt: 70000, interest_rate: 0.07, loan_term: 3  )
+     Path.create(priority:2,user_id:vero.id,career_id:programmer.id, loan_amt: 10000, interest_rate: 0.05, loan_term: 1  )
+     Path.create(priority:3,user_id:vero.id,career_id:programmer_bootcamp.id, loan_amt: 10000, interest_rate: 0.04, loan_term: 4  )
+     Path.create(priority:1,user_id:hassan.id,career_id:graphic_des.id, loan_amt: 10000, interest_rate: 0.02, loan_term: 1  )
+     Path.create(priority:2,user_id:hassan.id,career_id:ee.id,loan_amt: 50000, interest_rate: 0.02, loan_term: 3)
+     Path.create(priority:3,user_id:hassan.id,career_id:trainer.id, loan_amt: 70000, interest_rate: 0.03, loan_term: 1 )
 
     
      

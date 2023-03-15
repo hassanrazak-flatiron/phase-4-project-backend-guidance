@@ -12,6 +12,12 @@ class PathsController < ApplicationController
         render json: path 
     end 
     
+    def update
+        path = Path.find(params[:id])
+        path.update!(path_params)
+        render json: path, status: :accepted
+    end
+
 
     def destroy
     path = Path.find(params[:id])
