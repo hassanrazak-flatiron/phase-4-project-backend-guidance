@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   # a user wants to logout of a session. 
   delete '/logout', to: 'sessions#destroy'
  
+  post '/send_email', to: 'user_mailer#send_email'
 
 end
